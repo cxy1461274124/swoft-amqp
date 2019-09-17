@@ -2,6 +2,7 @@
 
 namespace Swoft\Amqp;
 
+use Closure;
 use Swoft\Amqp\Connection\Connection;
 use Swoft\Amqp\Connection\ConnectionManager;
 use Swoft\Amqp\Exception\AMQPException;
@@ -12,6 +13,10 @@ use Throwable;
  * Class Amqp
  *
  * @since   2.0
+ *
+ * @method static push(string $message, array $prop = [], string $route = '')
+ * @method static pop()
+ * @method static consume(Closure $callback = null)
  *
  * @package Swoft\Amqp
  */
